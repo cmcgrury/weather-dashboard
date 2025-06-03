@@ -1,0 +1,16 @@
+body {
+    background-color: #f0f0f0;
+}
+
+button {
+    background-color: teal;
+    color: white;
+    padding: 10px; /* Padding is the space between the border and the text*/
+    border: none; /* Border is the edge of an element*/
+    border-radius: 5px;
+}
+
+p {
+    color: blue;
+    font-size: 20px;
+}
