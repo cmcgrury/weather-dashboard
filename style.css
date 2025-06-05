@@ -8,9 +8,44 @@ button {
     padding: 10px; /* Padding is the space between the border and the text*/
     border: none; /* Border is the edge of an element*/
     border-radius: 5px;
+    display: block;
+    margin-bottom: 10px;
 }
 
 p {
     color: blue;
     font-size: 20px;
+}
+
+#input {
+    display: block; /* This means that the element is block-level. Block level elements take up the entire width of their container by default, start on a new line, and can have width, height, margin and padding controlled easily. Examples of block elements: div, p, h1-h6, section, article */
+    margin: 20px auto; /* 20px adds 20 pixels of spacing above and below the element, "auto" tells the browser to automatically calculate left and right margins so that the element is horizontally centered. */
+    /* Note: if you use for example margin-top: 100px and then in the same element use margin: 20px, the last one will be used and the first one will do nothing. */
+}
+
+#getWeatherButton {
+    display: block;
+    margin: 0 auto;
+}
+
+#instructions {
+    display: block;
+    margin: 20px auto;
+    text-align: center; /* This centers inline elements (<span>, <a>, <img>, text) and in line block elements inside a block container. */
+}
+
+#utilityContainer {
+    /* This uses flexbox, which is a CSS layout model that makes it easier to create well designed layouts especially when arranging elements in rows or columns. */
+    display: flex; /* Turns the element into a flex container enabling flexbox behavior for its children. */
+    flex-direction: column; /* Stacks child elements vertically isntead of horizontally */
+    align-items: center; /* Centers child elements horizontally inside the flex container. Think of it as center across the short axis (the x-axis in a vertical layout) */
+    justify-content: flex-start; /* Positions child elements at the top of the container. This controls alignment along the main axis which is vertical because i'm using flex-direction: column. */
+    min-height: 10vh; /* ensures the container is at least 10% of the viewport height. vh is an alternative for px and deals in percentages of the visible screen instead of pixels. */
+    margin-top: 20vh; /* pushes the entire contiane rdown from the top of the page by 20%. */
+}
+
+#weatherResult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
