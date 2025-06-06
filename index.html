@@ -12,11 +12,12 @@
         <div class="center-container"> <!-- Try using a class, these are similar to IDs but they can be reused again and again for example #header.center_container, #text.center_container, etc.-->
             <img id="mainImage" src="weather.jpg" width="275" height="154">
         </div>
+                <p id="instructions">Please enter the name of your city, state, and/or country divided by commas as shown in the input box.</p>
         <div id="utilityContainer">
             <input id="input" type="text" placeholder="e.g., Lincoln, NE, US">  
             <button id="getWeatherButton">Get my weather</button> <!-- creates button with id getWeatherButton-->
+            <h1 id="location"></h1>
         </div>
-        <p id="instructions">Please enter the name of your city, state, and/or country divided by commas as shown in the input box.</p>
         <div id="weatherResult"></div> <!-- <div> is like a box inside the web page where things inside this div box will be displayed.-->
         <script src="script.js"></script> <!-- Links the script file to the html file-->
     </body>

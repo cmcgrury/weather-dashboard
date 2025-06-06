@@ -1,4 +1,4 @@
-import apiKey from config.js;
+import apiKey from config.js; /* I have just learned that having your api key publically available is a bad thing, oops now I know */
 
 document.getElementById("getWeatherButton").addEventListener("click", function() {
 
