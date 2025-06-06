@@ -1,3 +1,5 @@
+import apiKey from config.js;
+
 document.getElementById("getWeatherButton").addEventListener("click", function() {
 
     
@@ -9,7 +11,6 @@ document.getElementById("getWeatherButton").addEventListener("click", function()
         return;
     }
     console.log ("City entered:", cityName);
-    let apiKey = "4e8ddf8786f8126d264f95a3d70a0f72";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
     let forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=metric`;
 
@@ -67,8 +68,11 @@ document.getElementById("getWeatherButton").addEventListener("click", function()
     }
     /* "`${...}`" is a simpler way of writing "blah blah blah" + x + "blah blah blah" + y ...   So it is actually displayed here as: hours + ":" + minutes + "AM/PM". .padStart(x,y) only works with strings (thats why we used toString() on minutes). padStart then ensures that: when the minutes string is less than 2 characters, add a leading zero. This ensures that it displays as 7:05 instead of 7:5 for example. */
 
+         document.getElementById("location").innerHTML = `
+         <h1> ${data.name}, ${data.sys.country} </h1>`
+
          document.getElementById("weatherResult").innerHTML = ` 
-         <h2>${data.name}, ${data.sys.country}</h2> 
+         <h2> Current Weather </h2>
          <p> Weather: ${data.weather[0].description}</p>
          <p> Temp: ${tempF}° F </p>
          <p> Feels Like: ${tempFFeel}° F </p>
@@ -79,6 +83,10 @@ document.getElementById("getWeatherButton").addEventListener("click", function()
          <h6> Time of data collection (in city's local time): ${timeCollectedFormatted}</h6>
          `; /* <h2> is a level of heading, it goes from <h1> (main title) to <h6> (tiniest heading). from my understanding, .innerHTML in this case takes weatherResult (from document.getElementByID) and when the script runs changes it to what is in the ``. Also, the data.x keys that display different data can be found on the API site. */
         
+        document.getElementById("forecastResult").innerHTML = `
+        
+        `
+
     })
     .catch(error => {
         console.error("Something went wrong.", error);
