@@ -11,6 +11,7 @@ A simple web app that allows users to input a city name and displays:
 - Humidity
 - Rain Volume (if applicable)
 - Time Of Data Collection
+- Forecast for weather conditions, rain precipitation chance, high/low temp, and max humidity
 
 ## How to use:
 1. Enter a city name (for example, 'Lincoln', 'Lincoln, NE, US')
@@ -18,10 +19,10 @@ A simple web app that allows users to input a city name and displays:
 3. Weather data will appear below
 
 ## Features to add:
-- An option to see a future forecast
-- More error handling
-- Reformat the page to have two columns instead of 1, allowing for more data to be displayed
-- General asthetic improvements, more pictures, etc.
+- An option to see a future forecast (done)
+- More error handling (done)
+- Reformat the page to have two columns instead of 1, allowing for more data to be displayed (done)
+- General asthetic improvements, more pictures, etc. (done)
 - More to come...
 
 ## Technologies used:
@@ -29,4 +30,3 @@ A simple web app that allows users to input a city name and displays:
 - CSS
 - JavaScript
 - OpenWeatherMap API
-
